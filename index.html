@@ -4,7 +4,198 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kaleab Meksha — Home</title>
+  <link rel="stylesheet" href="style.css" /><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kaleab Mekasha — Home</title>
   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"> Kaleab Mekasha</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO: background image is applied via CSS to .site-header.hero -->
+  <!-- HERO: background image is applied via CSS to .site-header.hero -->
+<!-- HERO: portrait on the left, text on the right -->
+<header class="site-header hero" id="home-hero" role="banner">
+  <div class="section hero-inner">
+    <!-- LEFT: circular portrait -->
+    <div class="hero-left-portrait">
+      <img id="profile-photo-hero" src="images/pro.png" alt="Kaleab Mekasha portrait" loading="lazy">
+    </div>
+
+    <!-- RIGHT: name, CTAs, kicker, framed lead, meta, pills -->
+    <div class="hero-right-content">
+      <div class="hero-top">
+        <h1 class="fullname">Hi I am Kaleab Mekasha</h1>
+
+        <div class="hero-actions">
+          <a class="hero-action live-demo" href="projects.html">See Projects</a>
+          <a class="hero-action view-all" href="about.html">Read My Story</a>
+        </div>
+      </div>
+
+      <p class="kicker">Graphic, Web and Content</p>
+      <p class="tagline">Requirements Engineer • Web Developer • Content Creator</p>
+
+      <div class="lead-frame" role="region" aria-label="Summary">
+        <p class="lead">
+          Third‑year Software Engineering student at Adama Science and Technology University.
+          I design and build responsive websites and digital menus, and produce social media content — from strategy to video editing and delivery.
+        </p>
+      </div>
+
+      <ul class="hero-meta">
+        <li><strong class="accent-orange">Location</strong> Addis Abeba, Ethiopia</li>
+        <li><strong class="accent-orange">Email</strong> <a href="mailto:kaleabmekasha4@gmail.com">kaleabmekasha4@gmail.com</a></li>
+        <li><strong class="accent-orange">Phone</strong> <a href="tel:+251952360184">+251 95 236 0184</a></li>
+      </ul>
+
+      <div class="hero-services">
+        <span class="pill pill-orange">Web Development</span>
+        <span class="pill pill-orange">Digital Menus</span>
+        <span class="pill pill-orange">Social Media</span>
+        <span class="pill pill-orange">Video Editing</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Example: About section headings updated to use accent classes -->
+<section id="about-summary" class="section">
+  <h2>About</h2>
+  <p class="explain">Concise CV summary and practical experience.</p>
+
+  <div class="cv-grid">
+    <div class="cv-left">
+      <h3 class="accent-orange">Career Objective</h3>
+      <p class="accent-purple">
+        A motivated third‑year Software Engineering student seeking internship opportunities to gain hands‑on industry experience,
+        strengthen technical and professional skills, and apply academic knowledge to real‑world software solutions.
+      </p>
+
+      <h3 class="accent-orange">Education</h3>
+      <p class="accent-purple"><strong>BSc Software Engineering</strong><br>Adama Science and Technology University (ASTU), Adama — 2023–Present</p>
+
+      <h3 class="accent-orange">Languages</h3>
+      <p class="accent-purple">Amharic (native); English (very good)</p>
+    </div>
+
+    <div class="cv-right">
+      <h3 class="accent-orange">Technical and Creative Skills</h3>
+      <ul class="skills-list accent-purple">
+        <li><strong>Web</strong> HTML, CSS, JavaScript, responsive design</li>
+        <li><strong>Programming</strong> Java, Python, C++ (fundamentals)</li>
+        <li><strong>Databases</strong> SQL basics</li>
+        <li><strong>Creative</strong> Social media management, content creation, production, video editing</li>
+        <li><strong>Tools</strong> Microsoft Word, Excel, PowerPoint</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+    <!-- SERVICES -->
+    <section id="skills-services" class="section">
+      <h2>Services</h2>
+      <p class="explain">What I offer — web, digital products, and content production.</p>
+
+      <div class="services-grid">
+        <article class="service">
+          <h4>Web Development</h4>
+          <p class="accent-purple">Responsive websites, CMS integration, SEO basics, and maintenance.</p>
+        </article>
+
+        <article class="service">
+          <h4>Digital Menus</h4>
+          <p class="accent-orange">Interactive menus, QR‑ready layouts, and mobile‑first ordering interfaces.</p>
+        </article>
+
+        <article class="service">
+          <h4>Social Media Management</h4>
+          <p class="accent-purple">Content strategy, post creation, scheduling, video shooting and editing and community engagement.</p>
+        </article>
+
+        <article class="service">
+          <h4>Video Production</h4>
+          <p class="accent-orange">Short‑form video production, editing, and basic motion graphics for social platforms.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS PREVIEW -->
+    <section id="home-projects" class="section">
+      <h2>Selected Projects</h2>
+      <p class="explain">Three highlights — visit Projects page for full details and live demos.</p>
+
+     <article class="project-featured">
+  <div class="featured-media">
+    <img src="images/proj.jpg" alt="Dr Debele Clinic website screenshot" loading="lazy">
+  </div>
+  <div class="featured-body">
+    <h3>Dr Debele Clinic — Website</h3>
+    <p class="project-desc">Full website build: responsive layout, CMS integration, SEO and performance tuning.</p>
+    <ul class="featured-bullets">
+      <li>Responsive, mobile-first design</li>
+      <li>SEO and accessibility improvements</li>
+      <li>CMS-driven content and contact forms</li>
+      <li>Automated booking</li>
+    </ul>
+    <div class="card-links">
+      <a href="https://drdebeleclinic.com/" target="_blank" rel="noopener noreferrer" class="live-demo">Live Demo</a>
+    </div>
+  </div>
+</article>
+<article class="project-card">
+  <img src="images/wed.jpg" alt="Wedding website screenshot" loading="lazy">
+  <div class="card-body">
+    <h3>Wedding Website</h3>
+    <p class="project-desc">Custom wedding site with RSVP, invitation, gallery, and event schedule.</p>
+    <div class="card-links">
+      <a href="https://tsionandhawariya.com/" target="_blank" rel="noopener noreferrer" class="live-demo">Live Demo</a>
+      <a href="projects.html#wedding">Details</a>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- CONTACT CTA -->
+    <section id="contact-cta" class="section">
+      <h2>Get in Touch</h2>
+      <p class="explain">Available for internships, freelance work, and collaborations.</p>
+      <p>
+        <a class="live-demo" href="contact.html">Contact Me</a>
+        <a class="view-all" href="mailto:kaleabmekasha4@gmail.com">Email kaleabmekasha4@gmail.com</a>
+      </p>
+
+      <div class="social-row">
+        <a href="#" class="social-icon" aria-label="Email">✉️</a>
+        <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">💬</a>
+        <a href="#" class="social-icon" aria-label="X">✖️</a>
+        <a href="#" class="social-icon" aria-label="Behance">🅱️</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
 </head>
 <body>
   <nav class="top-nav" aria-label="Main navigation">
@@ -188,4 +379,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
