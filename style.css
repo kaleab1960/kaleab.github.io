@@ -9,7 +9,7 @@
   --accent-light: #4a90e2;
   --accent-purple: #4fb3ff;
   --accent-red: #ff6a00;
-  --muted: #9aa3b2;
+  --muted: #c9d4e6;
   --white: #f7f7fb;
   --radius-lg: 12px;
   --radius-sm: 6px;
@@ -100,10 +100,10 @@ body {
 .site-header.hero {
   position: relative;
   background-color: var(--bg);
-  background-image: url("images/prmo.png"); /* replace filename if needed */
+  background-image: url("images/blue.jpg"); /* replace filename if needed */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position:  center bottom ;
   min-height: 350px;
   display: flex;
   align-items: center;
@@ -138,21 +138,22 @@ body {
   width: 300px;
   height: 350px;
   object-fit: cover;
-  border-radius: 70%;
+  border-radius: 50%; /* cleaner circle */
   border: 6px solid rgba(255,255,255,0.04);
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
+  transition: all 300ms ease;
   cursor: pointer;
-  background-clip: padding-box;
   display: block;
+  position: relative;
+  z-index: 10;
 }
 
-/* Hover: scale and slight rotate */
 #profile-photo-hero:hover {
   transform: scale(1.08) rotate(-0.8deg);
-  box-shadow: 0 22px 50px rgba(74,144,226,0.28);
+  box-shadow: 0 22px 50px rgba(136, 188, 248, 0.28);
   filter: brightness(1.06) saturate(1.05);
 }
+
 
 /* Right content area */
 .hero-right-content {
@@ -169,7 +170,7 @@ body {
 .hero-top {
   display: flex;
   align-items: center;
-  gap: 16px;
+gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -294,24 +295,6 @@ body {
 
 .photo-wrap { flex: 0 0 220px; display: flex; justify-content: flex-start; }
 
-#profile-photo {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid rgba(255,255,255,0.04);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
-  cursor: pointer;
-  background-clip: padding-box;
-}
-
-#profile-photo:hover {
-  transform: scale(1.08) rotate(-0.8deg);
-  box-shadow: 0 22px 50px rgba(74,144,226,0.28);
-  filter: brightness(1.06) saturate(1.05);
-}
-
 .profile-text { flex: 1 1 360px; }
 .profile-text h2 { margin: 0 0 8px 0; color: var(--accent-blue); }
 .explain { color: var(--muted); margin: 0 0 12px 0; line-height: 1.5; }
@@ -328,6 +311,32 @@ body {
 .who-title { margin: 0; font-size: 1.25rem; color: var(--accent-purple); letter-spacing: 0.3px; }
 .who-paragraph { margin: 0; color: var(--muted); line-height: 1.6; font-size: 0.98rem; max-width: 760px; }
 .who-small { margin: 6px 0 0 0; color: var(--accent-red); font-size: 0.88rem; }
+#skills-services {
+  background-image: url("images/city.jpg"); /* replace with your image path */
+  background-size: cover;       /* ensures the image covers the whole section */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  position: relative;           /* allows overlay positioning */
+  color: #fff;                  /* makes text readable on dark backgrounds */
+  padding: 60px 20px;           /* spacing inside the section */
+}
+
+/* Optional: add a subtle overlay for readability */
+#skills-services::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+  z-index: 0;
+}
+
+/* Ensure content sits above overlay */
+#skills-services h2,
+#skills-services p,
+#skills-services .services-grid {
+  position: relative;
+  z-index: 1;
+}
 
 /* =========================
    Projects: featured, grid, cards
@@ -372,6 +381,114 @@ body {
 .project-featured .project-desc { margin: 0; color: var(--muted); line-height: 1.45; font-size: 0.95rem; }
 .project-featured .featured-bullets { margin: 6px 0 0 0; padding-left: 18px; color: var(--muted); font-size: 0.92rem; }
 .project-featured .featured-bullets li { margin: 6px 0; }
+.site-header {
+  background-image: url('images/young.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+  min-height: 40vh;            /* adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Overlay for readability */
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 2; /* keeps text above overlay */
+}
+
+.fullname {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.projects-section h2,
+.projects-section p,
+.projects-section ul,
+.projects-section article {
+  position: relative;
+  z-index: 2; /* keeps content above overlay */
+}
+/* Shared background for both sections */
+.section.projects-experience {
+  --bg-image: url('images/personal.jpg'); /* update path */
+  position: relative;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional: creates a continuous/parallax feel */
+  padding: 48px 20px;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #172136; /* fallback while image loads */
+}
+
+/* Single overlay used for readability */
+.section.projects-experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(24, 11, 78, 0.48) 0%, rgba(0,0,0,0.36) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep section content above the overlay */
+.section.projects-experience > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Tweak headings and lists for contrast and spacing */
+.section.projects-experience .accent-orange {
+  color: #ff8a4c;
+  margin-bottom: 12px;
+}
+
+.section.projects-experience .accent-purple {
+  color: #ebeef3;
+}
+
+/* If two sections are adjacent and you want a seamless look, remove border-radius between them */
+.section.projects-experience + .section.projects-experience {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .section.projects-experience {
+    padding: 32px 16px;
+    background-attachment: scroll; /* avoid fixed backgrounds on mobile for performance */
+    border-radius: 6px;
+  }
+
+  .section.projects-experience .fullname,
+  .section.projects-experience h2 {
+    font-size: 1.25rem;
+  }
+}
+
+
 
 /* Projects grid */
 .projects-grid {
@@ -488,3 +605,280 @@ body {
   .who-paragraph { max-width: 100%; }
   .who-small { display: block; }
 }
+/* =========================
+   Contact page scoped overrides (add to end of style.css)
+   ========================= */
+.contact-page .site-header.hero {
+  /* make hero larger and center title/subtitle without changing global hero layout */
+  min-height: 420px;
+  padding: 64px 6% 64px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+}
+
+.contact-page .hero-inner {
+  justify-content: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Slightly larger, centered title and subtitle only on contact page */
+.contact-page .fullname {
+  font-size: clamp(2.2rem, 5.2vw, 4rem);
+  margin: 0;
+  line-height: 1.02;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.contact-page .tagline {
+  margin-top: 8px;
+  font-size: 1.15rem;
+  text-align: center;
+  color: var(--accent-purple);
+}
+
+/* Contact grid scoped to contact page */
+.contact-page .contact-section { margin-top: 18px; text-align: center; }
+.contact-page .contact-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+  gap: 18px;
+  justify-items: center;
+  margin: 12px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* responsive columns only for contact page */
+@media (min-width: 640px) {
+  .contact-page .contact-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (min-width: 1000px) {
+  .contact-page .contact-list { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+/* contact item block */
+.contact-page .contact-item { width: 100%; max-width: 320px; }
+.contact-page .contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease, background var(--transition-fast) ease;
+  color: inherit;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* icon circle */
+.contact-page .icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  box-shadow: 0 6px 18px rgba(11,18,32,0.06);
+}
+.contact-page .icon-wrap i { font-size: 26px; color: #334155; }
+
+/* label and value */
+.contact-page .contact-name { font-weight: 700; color: var(--white); font-size: 15px; }
+.contact-page .contact-value { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+/* hover */
+.contact-page .contact-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(11,18,32,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+}
+
+/* accent styles for phone and whatsapp */
+.contact-page .contact-link.phone .icon-wrap { background: linear-gradient(180deg, #fff7f0, #fff3ec); }
+.contact-page .contact-link.phone .icon-wrap i { color: var(--accent-red); }
+
+.contact-page .contact-link[href*="wa.me"] .icon-wrap { background: linear-gradient(180deg, #f0fff4, #ecfff0); }
+.contact-page .contact-link[href*="wa.me"] .icon-wrap i { color: #25D366; }
+/* Contact hero background image (add to end of style.css, inside contact-page overrides) */
+.contact-page .site-header.hero {
+  background-image: url("images/contact.jpg"); /* <-- put your image here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative; /* needed for overlay pseudo-element */
+  color: var(--white);
+}
+
+/* Dark overlay for contrast */
+.contact-page .site-header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(6,10,25,0.55), rgba(6,10,25,0.55));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure hero content sits above the overlay */
+.contact-page .site-header.hero .hero-inner,
+.contact-page .site-header.hero .hero-right-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* small screen tweaks */
+@media (max-width: 420px) {
+  .contact-page .contact-link { padding: 14px; }
+  .contact-page .icon-wrap { width: 56px; height: 56px; }
+  .contact-page .fullname { font-size: 2.6rem; }
+}
+/* =========================
+   About page: hero + summary (append to end of style.css)
+   ========================= */
+.about-page .site-header.hero.about-hero {
+  background-image: url("images/skill.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  min-height: 300px;
+  padding: 48px 6% 48px 6%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+  color: var(--accent-red);
+}
+
+/* overlay */
+.about-page .site-header.hero.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(6,10,25,0.55), rgba(6,10,25,0.55));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* hero inner layout: left photo, right title + summary */
+.about-page .about-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: start;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* left column: framed photo */
+.about-page .about-hero-photo-frame {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+.about-page #about-hero-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 6px solid rgba(255,255,255,0.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+  transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
+}
+.about-page #about-hero-photo:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55);
+  filter: brightness(1.03);
+}
+
+/* right column: title, tagline, and summary */
+.about-page .about-hero-right { text-align: left; }
+.about-page .about-hero-right .fullname {
+  margin: 0;
+  font-size: clamp(2.2rem, 5.2vw, 4rem);
+  line-height: 1.02;
+}
+.about-page .about-hero-right .tagline {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+/* hero summary block (placed directly under About Me) */
+.about-page .hero-summary {
+  margin-top: 18px;
+  max-width: 720px;
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+}
+.about-page .hero-summary .lead {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ensure hero content sits above overlay */
+.about-page .site-header.hero.about-hero .header-inner,
+.about-page .site-header.hero.about-hero .about-hero-inner { position: relative; z-index: 2; }
+.skills-section {
+  background-image: url("images/purp.jpg"); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  border-radius: 8px;
+  color: #fff; /* ensures text contrast */
+}
+
+.skills-section h2 {
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #f7770e;
+}
+
+.skills-list {
+  background: rgba(0,0,0,0.5); /* overlay for readability */
+  padding: 20px;
+  border-radius: 8px;
+}
+/* Responsive: stack portrait above title on small screens */
+@media (max-width: 880px) {
+  .about-page .about-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+  .about-page .about-hero-right { text-align: center; }
+  .about-page .hero-summary { margin-left: auto; margin-right: auto; }
+  .about-page .about-hero-photo-frame { margin: 0 auto; max-width: 260px; }
+}
+
+
+
+/* small screens: reduce hero padding */
+@media (max-width: 720px) {
+  .about-page .site-header.hero.about-hero { padding: 32px 6% 32px 6%; min-height: 260px; }
+  .about-page #about-hero-photo { border-width: 4px; }
+}
+
+
