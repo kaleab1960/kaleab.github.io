@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Kaleab Meksha</title>
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Your main stylesheet (do not replace global file) -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="contact-page">
   <nav class="top-nav">
     <div class="nav-inner">
       <a class="brand" href="index.html">Kaleab Meksha</a>
@@ -14,28 +19,67 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="fullname">Contact</h1>
-      <p class="tagline">Get in touch</p>
+  <!-- Hero header: uses existing hero styles but scoped to this page -->
+  <header class="site-header hero">
+    <div class="hero-inner">
+      <div class="hero-right-content" aria-hidden="false">
+        <h1 class="fullname">Contact</h1>
+        <p class="tagline">Get in touch</p>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="section contact-section">
-      <h2>Contact</h2>
-      <p class="explain">Preferred contact methods listed below. If you want another platform i can add.</p>
+      <h2 class="section-title visually-hidden">Contact</h2>
+      <p class="explain">Preferred contact methods listed below. If you want another platform I can add it.</p>
+
+      <!-- Grid of contact blocks (icons above, label and value below) -->
       <ul class="contact-list">
-        <li>Email: <a href="mailto:youremail@example.com">kaleabmekasha4@gmail.com</a></li>
-        <li>Phone: <a href="tel:+251912345678" class="phone">+251 95 236 0184</a></li>
-        <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">github.com/kaleab1960</a></li>
-        <li>whatsapp: <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer">+251 95 236 0184</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/your_instagram_username" target="_blank" rel="noopener noreferrer">@invincible_1960</a></li> 
+        <li class="contact-item">
+          <a class="contact-link" href="mailto:kaleabmekasha4@gmail.com" aria-label="Email Kaleab">
+            <span class="icon-wrap"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+            <span class="contact-name">Email</span>
+            <span class="contact-value">kaleabmekasha4@gmail.com</span>
+          </a>
+        </li>
+
+        <li class="contact-item">
+          <a class="contact-link phone" href="tel:+251952360184" aria-label="Call Kaleab">
+            <span class="icon-wrap"><i class="fas fa-phone" aria-hidden="true"></i></span>
+            <span class="contact-name">Phone</span>
+            <span class="contact-value">+251 95 236 0184</span>
+          </a>
+        </li>
+
+        <li class="contact-item">
+          <a class="contact-link" href="https://github.com/kaleab1960" target="_blank" rel="noopener noreferrer" aria-label="Kaleab on GitHub">
+            <span class="icon-wrap"><i class="fab fa-github" aria-hidden="true"></i></span>
+            <span class="contact-name">GitHub</span>
+            <span class="contact-value">github.com/kaleab1960</span>
+          </a>
+        </li>
+
+        <li class="contact-item">
+          <a class="contact-link" href="https://wa.me/251952360184" target="_blank" rel="noopener noreferrer" aria-label="Chat with Kaleab on WhatsApp">
+            <span class="icon-wrap"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+            <span class="contact-name">WhatsApp</span>
+            <span class="contact-value">Chat on WhatsApp</span>
+          </a>
+        </li>
+
+        <li class="contact-item">
+          <a class="contact-link" href="https://www.instagram.com/invincible_1960" target="_blank" rel="noopener noreferrer" aria-label="Kaleab on Instagram">
+            <span class="icon-wrap"><i class="fab fa-instagram" aria-hidden="true"></i></span>
+            <span class="contact-name">Instagram</span>
+            <span class="contact-value">@invincible_1960</span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
